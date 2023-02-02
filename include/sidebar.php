@@ -1,0 +1,94 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+    <li class="nav-heading">Procurement</li>
+
+    <li class="nav-item">
+        <a class="nav-link " href="admin.php" style="color: #57d8cd;">
+          <i class="bi bi-grid"></i>
+          <span>project</span>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link " href="index.php" style="color: #57d8cd;">
+          <i class="bi bi-grid"></i>
+          <span>Dashboard</span>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="order-requisition.php">
+          <i class="bi bi-journal-check"></i><span>Order Requisitions</span>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-clipboard"></i><span>Purchase Requisitions</span>
+        </a>
+        <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+          <li class="nav-heading">Budget</li>
+
+            <a href="budget-request.php">
+              <i class="bi bi-circle"></i><span>Budget Request</span>
+            </a>
+          </li>
+
+          <li>
+            <li class="nav-heading">Vendor</li>
+            <a href="vendor-request.php">
+              <i class="bi bi-circle"></i><span>Request Vendor</span>
+            </a>
+
+            <a href="vendor.php">
+              <i class="bi bi-circle"></i><span>Vendors</span>
+            </a>
+          </li>
+
+          
+        </ul>
+      </li>
+      
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#">
+          <i class="bi bi-bag"></i><span>Purchased Orders</span>
+        </a>
+      </li>
+
+      <li class="nav-heading">ACCOUNT</li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="myprofile.php">
+          <i class="bi bi-person"></i><span>My Profile</span>
+        </a>
+      </li>
+    </ul>
+
+  </aside>
+  
