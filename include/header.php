@@ -58,6 +58,7 @@ else
       </a>
       <i class="bi bi-list toggle-sidebar-btn"></i>
     </div>
+      
 
     <nav class="header-nav ms-auto">
       <ul class="d-flex align-items-center">
@@ -67,14 +68,16 @@ else
             <i class="bi bi-search"></i>
           </a>
         </li>
-
+      <li class="nav-item d-block mt-3 p-2">
+        <p id="time"></p>
+      </li>
         <li class="nav-item dropdown">
 
           <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
             <i class="bi bi-bell"></i>
             <span class="badge bg-primary badge-number">4</span>
           </a><!-- End Notification Icon -->
-
+            
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
             <li class="dropdown-header">
               You have 4 new notifications
@@ -204,4 +207,14 @@ else
 
   </header>
 
-  
+  <script>
+    function displayTime() {
+  var date = new Date();
+  var time = date.toLocaleTimeString();
+  document.getElementById("time").innerHTML = time;
+}
+
+displayTime();
+setInterval(displayTime, 1000);
+
+  </script>

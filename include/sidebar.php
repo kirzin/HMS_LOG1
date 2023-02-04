@@ -79,6 +79,39 @@
       </li>
       
 
+      <!-- warehouse -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#warehouse" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-clipboard"></i><span>Warehouse</span>
+        </a>
+        <ul id="warehouse" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+          <li class="nav-heading">Warehousing</li>
+            <a href="department-request.php">
+              <i class="bi bi-circle"></i><span>Department Request</span>
+            </a>
+
+          </li>
+
+          <!-- <li>
+            <li class="nav-heading">Projects</li>
+            <a href="project.php">
+              <i class="bi bi-circle"></i><span>Projects</span>
+            </a>
+
+            <a href="vendor.php">
+              <i class="bi bi-circle"></i><span>Ongoing Projects</span>
+            </a>
+
+              <a href="vendor.php">
+              <i class="bi bi-circle"></i><span>Rejected Project</span>
+            </a>
+          </li> -->
+
+          
+        </ul>
+      </li>
+
       <li class="nav-item">
         <a class="nav-link collapsed" href="#">
           <i class="bi bi-bag"></i><span>Purchased Orders</span>
