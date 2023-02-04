@@ -77,7 +77,7 @@
         <ul id="project-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
           <li class="nav-heading">Request</li>
-            <a href="admin.php">
+            <a href="project-request.php">
               <i class="bi bi-circle"></i><span>Project Request</span>
             </a>
           </li>
@@ -89,7 +89,11 @@
             </a>
 
             <a href="vendor.php">
-              <i class="bi bi-circle"></i><span>Vendors</span>
+              <i class="bi bi-circle"></i><span>Ongoing Projects</span>
+            </a>
+
+              <a href="vendor.php">
+              <i class="bi bi-circle"></i><span>Rejected Project</span>
             </a>
           </li>
 
