@@ -28,7 +28,7 @@ $sqlProject = mysqli_query($con,$queryProject);
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Dashboard - Alegario Cure Hospital</title>
+  <title>Dashboard - Alegario Cure Hospitals</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
