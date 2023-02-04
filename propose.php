@@ -54,6 +54,18 @@ if ($sqlpid && mysqli_num_rows($sqlpid) > 0) {
 
     <title>Proposal Form</title>
 </head>
+<style>
+  body{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+  }
+  .main-container{
+    width:70%;
+    margin:10px;
+  }
+</style>
 <body>
     <div class="main-container p-5 shadow-lg rounded">
     <form action="proposeCreate.php" method="post" class="row g-3">
@@ -137,6 +149,6 @@ if ($sqlpid && mysqli_num_rows($sqlpid) > 0) {
     
 </body>
 <?php
-include 'footer.php';
+include './include/footer.php';
 ?>
 </html>

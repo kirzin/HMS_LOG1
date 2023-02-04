@@ -1,4 +1,5 @@
 <?php
+session_start();
   include './include/config.php';
 
 $queryPrequest = "SELECT * FROM prequest";

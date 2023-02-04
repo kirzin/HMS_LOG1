@@ -27,12 +27,6 @@
     <ul class="sidebar-nav" id="sidebar-nav">
     <li class="nav-heading">Procurement</li>
 
-    <li class="nav-item">
-        <a class="nav-link " href="admin.php" style="color: #57d8cd;">
-          <i class="bi bi-grid"></i>
-          <span>project</span>
-        </a>
-      </li>
 
       <li class="nav-item">
         <a class="nav-link " href="index.php" style="color: #57d8cd;">
@@ -64,6 +58,34 @@
             <li class="nav-heading">Vendor</li>
             <a href="vendor-request.php">
               <i class="bi bi-circle"></i><span>Request Vendor</span>
+            </a>
+
+            <a href="vendor.php">
+              <i class="bi bi-circle"></i><span>Vendors</span>
+            </a>
+          </li>
+
+          
+        </ul>
+      </li>
+
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#project-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-clipboard"></i><span>Project</span>
+        </a>
+        <ul id="project-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+          <li class="nav-heading">Request</li>
+            <a href="admin.php">
+              <i class="bi bi-circle"></i><span>Project Request</span>
+            </a>
+          </li>
+
+          <li>
+            <li class="nav-heading">Projects</li>
+            <a href="project.php">
+              <i class="bi bi-circle"></i><span>Projects</span>
             </a>
 
             <a href="vendor.php">

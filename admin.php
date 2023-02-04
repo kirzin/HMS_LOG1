@@ -129,7 +129,7 @@ $sqlProject = mysqli_query($con,$queryProject);
 
 <div class="card-proj ">
 <?php while($result = mysqli_fetch_array($sqlProject)){?>
-  <div class="card mt-2" style="width: 20rem;">
+  <div class="card mt-2" style="width: 28rem;">
   <div class="card-body">
     <h1 class="card-title">
     <?php echo $result['Project_Name']; ?>
