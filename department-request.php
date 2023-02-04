@@ -97,7 +97,10 @@ if(isset($_POST['submit']))
         
     }
 ?>
-
+<?php 
+  include './include/header.php';
+  include './include/sidebar.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -192,3 +195,7 @@ if(isset($_POST['submit']))
         </div>
     </div>
 </main>
+<?php 
+  include './include/footer.php';
+
+?>
