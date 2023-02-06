@@ -9,7 +9,7 @@ if(isset($_POST['request'])){
   $date = $_POST['date'];
 
   $qcreate = "INSERT INTO prequest VALUE(null,'$project_requestor','$project_name','$date','$project_details')";
-  $sqlcreate =mysqli_query($con,$qcreate);
+  $sqlcreate = mysqli_query($con,$qcreate);
   echo '<script>alert("Succesful")</script></br>';
 
 }
@@ -101,7 +101,7 @@ $sqlProject = mysqli_query($con,$queryProject);
         </div>
         <div class="modal-body">
           
-          <form action="index.php" method="post">
+          <form action="project.php" method="post">
             <div class="mb-3">
               <label for="" class="form-label">Project Requestor</label>
               <input type="text" class="form-control" name="project_requestor"  required>

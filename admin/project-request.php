@@ -9,13 +9,14 @@ if(isset($_POST['request'])){
   $date = $_POST['date'];
 
   $qcreate = "INSERT INTO prequest VALUE(null,'$project_requestor','$project_name','$date','$project_details')";
-  $sqlcreate =mysqli_query($con,$qcreate);
+  $sqlcreate = mysqli_query($con,$qcreate);
   echo '<script>alert("Succesful")</script></br>';
 
 }
 $queryProject = "SELECT * FROM project";
 $sqlProject = mysqli_query($con,$queryProject);
 ?>
+
 <?php
   include './admin-include/header.php';
   include './admin-include/sidebar.php';
@@ -72,6 +73,10 @@ $sqlProject = mysqli_query($con,$queryProject);
   h5{
     border-left:solid 5px orange;
   }
+  /* .toogle {
+  margin:200px;
+ border:solid;
+} */
 </style>
 <main id="main" class="main">
 
@@ -101,19 +106,19 @@ $sqlProject = mysqli_query($con,$queryProject);
         </div>
         <div class="modal-body">
           
-          <form action="index.php" method="post">
+          <form action="project-request.php" method="post">
             <div class="mb-3">
-              <label for="" class="form-label">Project Requestor</label>
+              <label  class="form-label">Project Requestor</label>
               <input type="text" class="form-control" name="project_requestor"  required>
 
-              <label for="exampleFormControlInput1" class="form-label">Project Name</label>
+              <label class="form-label">Project Name</label>
               <input type="text" class="form-control" name="project_name" required>
             </div>
             <div class="mb-3">
-              <label for="exampleFormControlTextarea1" class="form-label">Project Details</label>
+              <label  class="form-label">Project Details</label>
               <textarea class="form-control" name="project_details" rows="3" required></textarea>
 
-              <label for="date">Date</label>
+              <label >Date</label>
               <input type="date" id="dates" name="date" class="form-control"required>
 
             </div>
@@ -127,10 +132,10 @@ $sqlProject = mysqli_query($con,$queryProject);
   </div>
 </div>
 
-<div class="card-proj ">
+<div class="card-proj " >
 <?php while($result = mysqli_fetch_array($sqlProject)){?>
   <div class="card mt-2" style="width: 28rem;">
-  <div class="card-body">
+  <div class="card-body"id="card-proj">
     <h1 class="card-title">
     <?php echo $result['Project_Name']; ?>
     </h1>
@@ -140,7 +145,8 @@ $sqlProject = mysqli_query($con,$queryProject);
       <h5>Project Start Date:</h5>
       <?php echo $result['Project_StartDate'];?>
       </div>
-          
+     <!-- <button id="toggleBtn">Toggle Text Color</button> -->
+
     <form action="note.php" class="mt-2">
     <a href="#" class="btn btn-primary">Accept</a>
       <a href="decline.php?view_id=<?php echo $result['Project_id']; ?>" class="btn btn-primary">Decline</a>
@@ -162,6 +168,14 @@ $sqlProject = mysqli_query($con,$queryProject);
 
 <script>
   document.getElementById('dates').valueAsDate = new Date();
+
+const toggleBtn = document.getElementById("toggleBtn");
+const text = document.getElementById("card-proj");
+
+toggleBtn.addEventListener("click", function() {
+  text.classList.toggle("toogle");
+});
+
 </script>
 <?php
  
