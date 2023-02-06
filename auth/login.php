@@ -30,6 +30,15 @@ if(isset($_POST['login']))
         mysqli_stmt_close($stmt);
         mysqli_close($con);
       }
+      //admin
+      if($roletype == 6)
+      {
+        $_SESSION['active'] = $row['user_username'];
+        header('location: ../admin/admin.php');
+        mysqli_stmt_close($stmt);
+        mysqli_close($con);
+      }
+
     }
     else
     {
