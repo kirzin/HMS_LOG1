@@ -3,10 +3,10 @@
   include '../include/config.php';
 
 if(isset($_POST['request'])){
-  $project_requestor = $_POST['project_requestor'];
-  $project_name = $_POST['project_name'];
-  $project_details = $_POST['project_details'];
-  $date = $_POST['date'];
+  $project_requestor = mysqli_real_escape_string($con, $_POST['project_requestor']);
+  $project_name = mysqli_real_escape_string($con, $_POST['project_name']);
+  $project_details = mysqli_real_escape_string($con, $_POST['project_details']);
+  $date = mysqli_real_escape_string($con, $_POST['date']);
 
   $qcreate = "INSERT INTO prequest VALUE(null,'$project_requestor','$project_name','$date','$project_details')";
   $sqlcreate = mysqli_query($con,$qcreate);
@@ -16,6 +16,7 @@ if(isset($_POST['request'])){
 $queryProject = "SELECT * FROM project";
 $sqlProject = mysqli_query($con,$queryProject);
 ?>
+
 
 <?php
   include './admin-include/header.php';
