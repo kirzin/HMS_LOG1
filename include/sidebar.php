@@ -69,7 +69,7 @@
               <i class="bi bi-circle"></i><span>Ongoing Projects</span>
             </a>
 
-              <a href="vendor.php">
+              <a href="decline-project.php">
               <i class="bi bi-circle"></i><span>Rejected Project</span>
             </a>
           </li>
