@@ -1,5 +1,5 @@
 <?php
-  include './include/config.php';
+  include '../include/config.php';
 
 $pid = $_GET['propose_id'];
 $querypid = "SELECT * FROM prequest WHERE Prequest_id = '" . $pid . "'";

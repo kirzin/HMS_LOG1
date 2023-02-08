@@ -6,7 +6,7 @@
 
 
       <li class="nav-item">
-        <a class="nav-link " href="index.php" style="color: #57d8cd;">
+        <a class="nav-link " href="./index.php" style="color: #57d8cd;">
           <i class="bi bi-grid"></i>
           <span>Dashboard</span>
         </a>
@@ -54,14 +54,14 @@
         <ul id="project-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
           <li class="nav-heading">Request</li>
-            <a href="project-request.php">
+            <a href="Project/project.php">
               <i class="bi bi-circle"></i><span>Project Request</span>
             </a>
           </li>
 
           <li>
             <li class="nav-heading">Projects</li>
-            <a href="project.php">
+            <a href="Project/project.php">
               <i class="bi bi-circle"></i><span>Projects</span>
             </a>
 

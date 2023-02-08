@@ -10,7 +10,7 @@ if(isset($_POST['request'])){
 
   $qcreate = "INSERT INTO prequest VALUE(null,'$project_requestor','$project_name','$date','$project_details')";
   $sqlcreate = mysqli_query($con,$qcreate);
-  echo '<script>alert("Succesful")</script></br>';
+  echo '<script>Swal.fire("Succesful")</script></br>';
 
 }
 $queryProject = "SELECT * FROM project";
@@ -124,7 +124,7 @@ $sqlProject = mysqli_query($con,$queryProject);
 
             </div>
             <div class="mb-3">
-              <input type="submit" class="btn btn-primary" name="request" value="Submit">
+              <input id="alertButton" type="submit" class="btn btn-primary" name="request" value="Submit">
             </div>
           </form>
         </div>
@@ -166,8 +166,21 @@ $sqlProject = mysqli_query($con,$queryProject);
   
       
 </main><!-- End #main -->
-
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
+
+  
+//submitted
+ document.getElementById("alertButton").addEventListener("click", function(){
+        Swal.fire(
+  'Good job!',
+  'Submitted',
+  'success'
+)
+    });
+
+
+
   document.getElementById('dates').valueAsDate = new Date();
 
 const toggleBtn = document.getElementById("toggleBtn");

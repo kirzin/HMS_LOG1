@@ -1,6 +1,15 @@
 
-<?php
+
+<?php 
 session_start();
+include '../include/config.php';
+
+$reject = "SELECT * FROM rejectionnote RIGHT JOIN project ON rejectionnote.Note_id =  project.Project_id";
+$sqlreject = mysqli_query($con, $reject);
+
+?>
+<?php
+
 include './include/header.php';
 include './include/sidebar.php';
 ?>
@@ -35,9 +44,36 @@ include './include/sidebar.php';
   <link href="assets/css/style.css" rel="stylesheet">
 
 </head>
-<body>
-    <h1>Decline Projects</h1>
-</body>
+<style>
+    .main{
+        display:flex;
+        justify-content:space-evenly;
+        flex-direction:column;
+    }
+    .main-con{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:space-evenly;
+    }
+</style>
+<main id="main" class="main">
+    <h1>Rejected Projects</h1>
+    <hr>
+        <div class="main-con">
+                  <?php while($result = mysqli_fetch_array($sqlreject)){?>
+                        <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title"><?php echo $result['Project_Name'];?></h5>
+                            <p class="card-text">
+                                <h2>Rejection Note:</h2>
+                                <?php echo $result['Note_Description'];?>.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                        </div>
+        <?php } ?>
+        </div>
+  
+</main>
 </html>
 <?php
 include './include/footer.php';

@@ -1,5 +1,5 @@
 <?php
-  include './include/config.php';
+  include '../include/config.php';
 
 if(isset($_POST['confirm'])){
  $prequestid = $_POST['prequestid'];
